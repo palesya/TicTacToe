@@ -65,6 +65,8 @@ public class TicTacToe {
 
     //проверить ячейку на пустоту и сделать ход для X
     private static String[][] generateArrayWithX(String[][] array) {
+        boolean moveDone = false;
+        while (!moveDone){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите номер заполняемой ячейки по горизонтали (от 1 до 3): ");
         int x = scanner.nextInt();
@@ -72,21 +74,23 @@ public class TicTacToe {
         int y = scanner.nextInt();
         if (x < 1 || y < 1 || x > 3 || y > 3) {
             System.out.println("Неверное число. Номер ячейки должен быть от 1 до 3!");
+
         } else {
             if (array[x - 1][y - 1] == "_") {
                 array[x - 1][y - 1] = "X";
-
+                moveDone =true;
             } else {
                 System.out.println("Данная ячейка занята. Сделайте другой ход.");
 
             }
-        }
-
+        }}
         return array;
     }
 
     //проверить ячейку на пустоту и сделать ход для 0
     private static String[][] generateArrayWith0(String[][] array) {
+        boolean moveDone = false;
+        while (!moveDone){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите номер заполняемой ячейки по горизонтали (от 1 до 3): ");
         int x = scanner.nextInt();
@@ -97,10 +101,11 @@ public class TicTacToe {
         } else {
             if (array[x - 1][y - 1] == "_") {
                 array[x - 1][y - 1] = "0";
+                moveDone =true;
             } else {
                 System.out.println("Данная ячейка занята. Сделайте другой ход.");
             }
-        }
+        }}
         return array;
     }
 
