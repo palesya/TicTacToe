@@ -1,4 +1,4 @@
-package TicTacToe;//Крестики-нолики
+package com.teachmeskills.Homework4.TicTacToe;//Крестики-нолики
 
 import java.util.Arrays;
 import java.util.Scanner;
