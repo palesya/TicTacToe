@@ -1,9 +1,9 @@
-//Задача 1
+package Homework4;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class Task1 {
+public class Task1to5 {
 
     private static Random random = new Random();
 
